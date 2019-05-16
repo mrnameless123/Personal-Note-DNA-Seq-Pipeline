@@ -1,0 +1,140 @@
+
+\documentclass[11pt, a4paper]{article} 
+% Necessary
+\usepackage[english]{babel} % English and German language 
+\usepackage{booktabs} 
+\usepackage{comment}
+\usepackage[utf8]{inputenc} 
+\usepackage[T1]{fontenc} 
+
+\usepackage{amsmath,amsfonts,amsthm} % Math packages which might be useful for equations
+\usepackage{tikz} 
+\usepackage{tikz-cd}
+\usetikzlibrary{positioning,arrows} 
+\usetikzlibrary{decorations.pathreplacing} 
+\usepackage{tikzsymbols} 
+\usepackage{blindtext} 
+\usepackage{geometry} 
+\geometry{
+	top=2cm, % Defines top margin
+	bottom=2cm, % Defines bottom margin
+	left=2.2cm, % Defines left margin
+	right=2.2cm, % Defines right margin
+	includehead, % Includes space for a header
+	%includefoot, % Includes space for a footer
+	%showframe, % Uncomment if you want to show how it looks on the page 
+}
+
+\setlength{\parindent}{15pt} 
+\usepackage{setspace} 
+
+\linespread{1.5}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc} 
+\usepackage{XCharter} 
+
+
+\usepackage{fancyhdr} 
+\pagestyle{fancy} 
+
+% Headers
+\lhead{} % Define left header
+\chead{\textit{}} % Define center header - e.g. add your paper title
+\rhead{} % Define right header
+
+% Footers
+\lfoot{} % Define left footer
+\cfoot{\footnotesize \thepage} % Define center footer
+\rfoot{ } % Define right footer
+
+%---------------------------------------------------------------------------------
+%	Add information on bibliography
+\usepackage{natbib} 
+\usepackage{har2nat} 
+\newcommand{\signature}[2][5cm]{%
+  \begin{tabular}{@{}p{#1}@{}}
+    #2 \\[2\normalbaselineskip] \hrule \\[0pt]
+    {\small \textit{Signature}} \\[2\normalbaselineskip] \hrule \\[0pt]
+    {\small \textit{Place, Date}}
+  \end{tabular}
+}
+%---------------------------------------------------------------------------------
+%	General information
+%---------------------------------------------------------------------------------
+\title{Getting Started with DNA Seq} % Adds your title
+\author{
+Minh Tran % Add your first and last name
+    %\thanks{} % Adds a footnote to your title
+    \institution{Whatever} % Adds your institution
+  }
+
+\date{\small \today} 
+
+\begin{document}
+
+
+% If you want a cover page, uncomment "\input{coverpage.tex}" and uncomment "\begin{comment}" and "\end{comment}" to comment the following lines
+%\input{coverpage.tex}
+
+%\begin{comment}
+\maketitle % Print your title, author name and date; comment if you want a cover page 
+
+\begin{center} % Center text
+    % Word count: XXXX
+% How to check words in a LaTeX document: https://www.overleaf.com/help/85-is-there-a-way-to-run-a-word-count-that-doesnt-include-latex-commands
+\end{center}
+%\end{comment}
+
+%----------------------------------------------------------------------------------------
+% Introduction
+%----------------------------------------------------------------------------------------
+\setcounter{page}{1} % Sets counter of page to 1
+
+\section{Introduction} % Add a section title
+\subsection{Motivation} % Add a subsection
+% \LaTeX allows you to highlight text in various ways: \textbf{bold}, \textit{italics}, with \textsc{small caps} or \texttt{as a coding font}.\footnote{ This command adds a footnote to your text.} 
+What is DNA seq and Why is it important?
+\begin{enumerate}
+    \item What: DNA seq is the process of determining the sequence of nucleotides (As, Ts, Cs and Gs) in a piece of DNA
+    \item Why: Knowledge of \textbf{DNA seq} has become indispensable for  basic biological research, and in numerous applied fields such as medical diagnosis, biotechnology and biological systematics. For example, scientists can use sequence information to determine which stretches of DNA contain genes and which stretches carry regulatory instructions, turning genes on or off. In addition, and importantly, sequence data can highlight changes in a gene that may cause disease.
+\end{enumerate}
+%----------------------------------------------------------------------------------------
+% Literature review
+%----------------------------------------------------------------------------------------
+\section{Preliminary}
+\subsection{Sanger Sequencing}
+First Generation of DNA Seq (aka Sanger Seq or chain termination method) is the first DNA sequencing method invented by Frederick Sanger. 
+
+The basic of Sanger Sequencing follows 
+\begin{enumerate}
+    \item Starts by having a short primer binding next to the region of interest. 
+\end{enumerate}
+
+\bigskip
+\hrule
+\bigskip
+\textit{\textbf{Discussion}: Similar to previous research, this paper provides very complicated quantitative computation and present those information into a complex figures and diagram. I might handle some of those graphs. I don't have any comment about the biology experiments. }     
+\bigskip
+\hrule
+\bigskip
+
+\subsection{Project 2: Related works}
+\textbf{\cite{rackham2016}: A predictive computational framework for direct reprogramming between human cell types}
+
+In \cite{rackham2016} authors introduce a novel predictive system (Mogrify) that combines gene expression data with regulatory network information to predict the reprogramming factors necessary to induce cell conversion. Mogrify has proven it capability when correctly predicts the transcription factors used in known transdifferentitaions. To save researchers in the field of cell conversion from exhausive testing of large possible combination of transcription factors, Mogrify has been implemented using a network-based computational framework and applied to FANTOM5 data set. The goal of Mogrify is to identify TFs that control the part of the regulatory network most responsible for the identify of the target cell type. For example, TFs for converting fibroblasts into iPS cells are OCT4, SOX2, KLF4, MYC or OCT4, SOX2, NANOG, LIN28. Mogrify successfully predicted NANOG, OCT4 and SOX2 as the top three TFs for the conversion.
+
+\bigskip
+\hrule
+\bigskip
+\textit{\textbf{Discussion}: Even though there are some unclear points in formulating gene score ($G_{x}^{s}$) (how do we get $L_{x}^{s}$?, why do we use $log_{10}$ but not other $log$ base?), I find this research is pretty interesting to me. It has more computational and space that I can contribute to if I join this project.}     
+\bigskip
+\hrule
+\bigskip
+\bibliographystyle{plainnat} % Defines your bibliography style
+\bibliography{references}
+
+
+
+
+\end{document}
